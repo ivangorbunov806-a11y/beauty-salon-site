@@ -119,11 +119,11 @@ p {
   position: absolute;
   inset: 0 0 auto;
   z-index: 5;
-  min-height: 96px;
+  min-height: 124px;
   display: grid;
   grid-template-columns: auto 1fr auto;
   align-items: center;
-  padding-top: 1.2rem;
+  padding-top: 1rem;
   gap: 1rem;
 }
 
@@ -135,22 +135,24 @@ p {
 .menu-topbar .logo {
   display: inline-flex;
   align-items: center;
+  justify-content: center;
   line-height: 0;
+  align-self: center;
 }
 
 .hero-header .logo img {
-  height: 52px;
+  height: 88px;
   width: auto;
-  max-width: 100%;
+  max-width: none;
   object-fit: contain;
   border-radius: 4px;
   display: block;
 }
 
 .menu-topbar .logo img {
-  height: 64px;
+  height: 108px;
   width: auto;
-  max-width: 100%;
+  max-width: none;
   object-fit: contain;
   border-radius: 4px;
   display: block;
@@ -274,16 +276,16 @@ p {
 }
 
 .menu-topbar {
-  min-height: 86px;
+  min-height: 146px;
   display: grid;
   grid-template-columns: auto 1fr auto;
   align-items: center;
-  padding-top: 1rem;
+  padding-top: 0.9rem;
   gap: 1rem;
 }
 
 .menu-content {
-  min-height: calc(100% - 86px);
+  min-height: calc(100% - 146px);
   display: grid;
   gap: 2.7rem;
   padding-top: 2.4rem;
@@ -624,16 +626,20 @@ summary {
 @media (max-width: 760px) {
   .hero-header,
   .menu-topbar {
-    min-height: 72px;
+    min-height: 86px;
     padding-top: 0.8rem;
   }
 
   .hero-header .logo img {
-    height: 36px;
+    height: 48px;
   }
 
   .menu-topbar .logo img {
-    height: 48px;
+    height: 64px;
+  }
+
+  .menu-content {
+    min-height: calc(100% - 86px);
   }
 
   .hero-content {
