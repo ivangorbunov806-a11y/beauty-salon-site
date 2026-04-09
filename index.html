@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Salon Éclat — Премиальный салон красоты</title>
+    <meta
+      name="description"
+      content="Премиальный салон красоты: уход, процедуры, комфортное пространство и деликатный сервис."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:wght@500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header class="site-header" id="top">
+      <div class="container nav-wrap">
+        <a class="logo" href="#top" aria-label="Salon Éclat — на главную">
+          <img src="logo/logo-black.jpg" alt="Salon Éclat" />
+        </a>
+        <button class="menu-toggle" aria-expanded="false" aria-controls="main-nav">
+          Меню
+        </button>
+        <nav id="main-nav" class="main-nav" aria-label="Основная навигация">
+          <a href="#services">Услуги</a>
+          <a href="#about">О салоне</a>
+          <a href="#gallery">Галерея</a>
+          <a href="#process">Как это работает</a>
+          <a href="#contacts">Контакты</a>
+          <a href="#booking" class="btn btn-small">Записаться</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero section-dark">
+        <div class="hero-overlay"></div>
+        <img class="hero-bg" src="hero/hero-main.jpg" alt="Интерьер салона красоты" />
+        <div class="container hero-content fade-in">
+          <p class="eyebrow">Премиальный уход</p>
+          <h1>Красота, которая чувствуется</h1>
+          <p class="hero-subtitle">
+            Уход и процедуры для вашей естественной привлекательности
+          </p>
+          <div class="hero-actions">
+            <a class="btn" href="#booking">Записаться</a>
+            <a class="btn btn-ghost" href="#services">Услуги</a>
+          </div>
+        </div>
+      </section>
+
+      <section id="services" class="section services">
+        <div class="container">
+          <div class="section-head fade-in">
+            <p class="eyebrow">Услуги</p>
+            <h2>Индивидуальные решения для вашего образа</h2>
+          </div>
+          <div class="service-grid">
+            <article class="card fade-in">
+              <img src="services/service-problem-1.jpg" alt="Уход за кожей лица" />
+              <h3>Уход за лицом</h3>
+              <p>Глубокое очищение, питание и восстановление баланса кожи.</p>
+            </article>
+            <article class="card fade-in">
+              <img src="services/service-problem-2.jpg" alt="Эстетические процедуры" />
+              <h3>Эстетика кожи</h3>
+              <p>Деликатные процедуры для сияния, упругости и ровного тона.</p>
+            </article>
+            <article class="card fade-in">
+              <img src="services/service-problem-3.jpg" alt="Уход за волосами" />
+              <h3>Уход за волосами</h3>
+              <p>Ритуалы восстановления структуры и естественного блеска волос.</p>
+            </article>
+            <article class="card fade-in">
+              <img src="services/service-problem-4.jpg" alt="Брови и ресницы" />
+              <h3>Брови и ресницы</h3>
+              <p>Акцент на выразительность и естественную гармонию черт лица.</p>
+            </article>
+            <article class="card fade-in">
+              <img src="services/service-problem-5.jpg" alt="Расслабляющие ритуалы" />
+              <h3>Релакс-ритуалы</h3>
+              <p>Премиальные спа-программы для восстановления энергии и комфорта.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="about" class="section about">
+        <div class="container about-layout">
+          <div class="about-copy fade-in">
+            <p class="eyebrow">О салоне</p>
+            <h2>Пространство, где эстетика встречает заботу</h2>
+            <p>
+              Мы создали атмосферу тишины и комфорта, где каждый элемент — от света до
+              аромата — работает на ваше расслабление. Наш подход основан на деликатной
+              диагностике, профессиональном опыте и персональных рекомендациях.
+            </p>
+          </div>
+          <div class="about-gallery">
+            <img class="fade-in" src="about/about-main.jpg" alt="Интерьер салона красоты" />
+            <img class="fade-in" src="about/about-main2.jpg" alt="Зона ожидания в салоне" />
+            <img class="fade-in" src="about/about-main3.jpg" alt="Атмосфера салона" />
+            <img class="fade-in" src="about/about-main4.jpg" alt="Кабинет процедур" />
+            <img class="fade-in" src="about/about-main5.jpg" alt="Детали интерьера" />
+            <img class="fade-in" src="about/about-main6.jpg" alt="Премиальная обстановка" />
+            <img class="fade-in" src="about/about-main7.jpg" alt="Комфортная зона салона" />
+            <img class="fade-in" src="about/about-main8.jpg" alt="Интерьер с мягким светом" />
+          </div>
+        </div>
+      </section>
+
+      <section id="gallery" class="section gallery-preview section-dark">
+        <div class="container gallery-layout">
+          <div class="section-head fade-in">
+            <p class="eyebrow">Галерея</p>
+            <h2>Портфолио деликатных преображений</h2>
+            <a class="btn btn-light" href="#booking">Хочу такой результат</a>
+          </div>
+          <div class="gallery-image-wrap reveal fade-in">
+            <img src="gallery/gallery1.jpg" alt="Результат процедуры в салоне" />
+          </div>
+        </div>
+      </section>
+
+      <section class="section equipment">
+        <div class="container">
+          <div class="section-head fade-in">
+            <p class="eyebrow">Оборудование</p>
+            <h2>Технологии, которым можно доверять</h2>
+          </div>
+          <div class="equipment-grid">
+            <img class="fade-in" src="equipment1.jpg" alt="Профессиональное оборудование 1" />
+            <img class="fade-in" src="equipment2.jpg" alt="Профессиональное оборудование 2" />
+            <img class="fade-in" src="equipment3.jpg" alt="Профессиональное оборудование 3" />
+            <img class="fade-in" src="equipment4.jpg" alt="Профессиональное оборудование 4" />
+            <img class="fade-in" src="equipment5.jpg" alt="Профессиональное оборудование 5" />
+            <img class="fade-in" src="equipment6.jpg" alt="Профессиональное оборудование 6" />
+            <img class="fade-in" src="equipment7.jpg" alt="Профессиональное оборудование 7" />
+            <img class="fade-in" src="equipment8.jpg" alt="Профессиональное оборудование 8" />
+          </div>
+        </div>
+      </section>
+
+      <section id="process" class="section process section-soft">
+        <div class="container">
+          <div class="section-head fade-in">
+            <p class="eyebrow">Как это работает</p>
+            <h2>Прозрачный путь к вашему результату</h2>
+          </div>
+          <div class="timeline">
+            <article class="step fade-in">
+              <img src="process-1.jpg" alt="Консультация" />
+              <div>
+                <h3>01. Консультация</h3>
+                <p>Определяем запрос, оцениваем состояние и подбираем персональный план.</p>
+              </div>
+            </article>
+            <article class="step fade-in">
+              <img src="process-2.jpg" alt="Подготовка к процедуре" />
+              <div>
+                <h3>02. Подготовка</h3>
+                <p>Бережная подготовка кожи и подбор комфортного режима процедуры.</p>
+              </div>
+            </article>
+            <article class="step fade-in">
+              <img src="process-3.jpg" alt="Проведение процедуры" />
+              <div>
+                <h3>03. Процедура</h3>
+                <p>Точная техника, премиальные материалы и фокус на естественном результате.</p>
+              </div>
+            </article>
+            <article class="step fade-in">
+              <img src="process-4.jpg" alt="Финальный уход" />
+              <div>
+                <h3>04. Финальный уход</h3>
+                <p>Закрепляем эффект и даем рекомендации для домашней поддержки.</p>
+              </div>
+            </article>
+          </div>
+          <div class="process-strip">
+            <img class="fade-in" src="process-5.jpg" alt="Процесс 5" />
+            <img class="fade-in" src="process-6.jpg" alt="Процесс 6" />
+            <img class="fade-in" src="process-7.jpg" alt="Процесс 7" />
+            <img class="fade-in" src="process-8.jpg" alt="Процесс 8" />
+            <img class="fade-in" src="process-9.jpg" alt="Процесс 9" />
+            <img class="fade-in" src="process-10.jpg" alt="Процесс 10" />
+          </div>
+        </div>
+      </section>
+
+      <section class="section faq">
+        <div class="container">
+          <div class="section-head fade-in">
+            <p class="eyebrow">FAQ</p>
+            <h2>Часто задаваемые вопросы</h2>
+          </div>
+          <div class="faq-list">
+            <details class="fade-in">
+              <summary>Сколько длится первичная консультация?</summary>
+              <p>Обычно 20–30 минут, этого достаточно для точного подбора процедуры.</p>
+            </details>
+            <details class="fade-in">
+              <summary>Подходят ли процедуры для чувствительной кожи?</summary>
+              <p>Да, мы адаптируем протоколы и используем щадящие техники.</p>
+            </details>
+            <details class="fade-in">
+              <summary>Как часто стоит повторять процедуры?</summary>
+              <p>Зависит от типа кожи и цели. После консультации вы получите персональный график.</p>
+            </details>
+          </div>
+        </div>
+      </section>
+
+      <section id="contacts" class="section contacts section-dark">
+        <div class="container contact-layout">
+          <div class="fade-in">
+            <p class="eyebrow">Контакты</p>
+            <h2 id="booking">Готовы к бережному преображению?</h2>
+            <p>г. Москва, ул. Эстетическая, 18</p>
+            <p><a href="tel:+74951234567">+7 (495) 123-45-67</a></p>
+            <p><a href="mailto:hello@salon-eclat.ru">hello@salon-eclat.ru</a></p>
+          </div>
+          <form class="booking-card fade-in" aria-label="Форма записи">
+            <h3>Запись онлайн</h3>
+            <label>
+              Имя
+              <input type="text" name="name" placeholder="Ваше имя" required />
+            </label>
+            <label>
+              Телефон
+              <input type="tel" name="phone" placeholder="+7" required />
+            </label>
+            <label>
+              Услуга
+              <select name="service" required>
+                <option value="">Выберите услугу</option>
+                <option>Уход за лицом</option>
+                <option>Эстетика кожи</option>
+                <option>Уход за волосами</option>
+                <option>Релакс-ритуалы</option>
+              </select>
+            </label>
+            <button type="submit" class="btn btn-light">Отправить заявку</button>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-wrap">
+        <img src="logo/logo-black.jpg" alt="Salon Éclat" />
+        <p>© 2026 Salon Éclat. Премиальный салон красоты.</p>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
