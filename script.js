@@ -16,20 +16,36 @@ if (menuToggle && nav) {
   });
 }
 
+const setStagger = (containerSelector, itemSelector, step = 90, maxDelay = 420) => {
+  document.querySelectorAll(containerSelector).forEach((container) => {
+    container.querySelectorAll(itemSelector).forEach((item, index) => {
+      const delay = Math.min(index * step, maxDelay);
+      item.style.setProperty('--reveal-delay', `${delay}ms`);
+    });
+  });
+};
+
+setStagger('#services .service-grid', '.card');
+setStagger('#about .about-gallery', '.fade-up');
+setStagger('#gallery .gallery-layout', '.fade-up', 120, 180);
+
 const observer = new IntersectionObserver(
-  (entries) => {
+  (entries, currentObserver) => {
     entries.forEach((entry) => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('is-visible');
+      if (!entry.isIntersecting) {
+        return;
       }
+
+      entry.target.classList.add('show');
+      currentObserver.unobserve(entry.target);
     });
   },
   {
-    threshold: 0.15,
-    rootMargin: '0px 0px -10% 0px',
+    threshold: 0.2,
+    rootMargin: '0px 0px -8% 0px',
   }
 );
 
-document.querySelectorAll('.fade-in, .reveal').forEach((element) => {
+document.querySelectorAll('.fade-up').forEach((element) => {
   observer.observe(element);
 });
