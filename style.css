@@ -131,10 +131,29 @@ p {
   justify-self: center;
 }
 
+.logo {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 0;
+  overflow: hidden;
+}
+
 .logo img {
-  width: clamp(92px, 14vw, 132px);
-  height: auto;
+  height: clamp(48px, 5vw, 56px);
+  width: auto;
+  max-width: 100%;
+  display: block;
+  object-fit: contain;
+  transform: scale(1.06);
+  transform-origin: center;
+  image-rendering: -webkit-optimize-contrast;
+  image-rendering: crisp-edges;
   border-radius: 4px;
+}
+
+.menu-topbar .logo img {
+  height: clamp(56px, 6vw, 64px);
 }
 
 .menu-toggle,
@@ -607,6 +626,14 @@ summary {
   .menu-topbar {
     min-height: 72px;
     padding-top: 0.8rem;
+  }
+
+  .hero-header .logo img {
+    height: clamp(32px, 8vw, 36px);
+  }
+
+  .menu-topbar .logo img {
+    height: clamp(40px, 10vw, 46px);
   }
 
   .hero-content {
