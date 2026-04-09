@@ -397,24 +397,46 @@ summary {
   width: 94px;
 }
 
-.fade-in {
+.fade-up {
   opacity: 0;
-  transform: translateY(20px);
-  transition: opacity 0.8s ease, transform 0.8s ease;
+  transform: translate3d(0, 20px, 0);
+  transition:
+    opacity 0.8s cubic-bezier(0.22, 1, 0.36, 1),
+    transform 0.8s cubic-bezier(0.22, 1, 0.36, 1);
+  transition-delay: var(--reveal-delay, 0ms);
+  will-change: opacity, transform;
 }
 
-.fade-in.is-visible {
+.fade-up.show {
   opacity: 1;
-  transform: none;
+  transform: translate3d(0, 0, 0);
+}
+
+.fade-in {
+  transform: translate3d(0, 14px, 0);
+  transition-duration: 0.9s;
 }
 
 .reveal img {
   transform: scale(1.04);
-  transition: transform 1.25s ease;
+  transition: transform 1.25s cubic-bezier(0.22, 1, 0.36, 1);
 }
 
-.reveal.is-visible img {
+.reveal.show img {
   transform: scale(1);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .fade-up,
+  .fade-in,
+  .reveal img {
+    transition: none;
+    transform: none;
+  }
+
+  .fade-up {
+    opacity: 1;
+  }
 }
 
 @media (min-width: 760px) {
