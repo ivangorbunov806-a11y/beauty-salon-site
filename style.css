@@ -115,21 +115,16 @@ p {
   border-color: var(--white);
 }
 
-.site-header {
+.hero-header {
   position: absolute;
   inset: 0 0 auto;
-  z-index: 200;
-  pointer-events: none;
-}
-
-.hero-header {
-  min-height: 86px;
+  z-index: 5;
+  min-height: 96px;
   display: grid;
   grid-template-columns: auto 1fr auto;
   align-items: center;
-  padding-top: 1rem;
+  padding-top: 1.2rem;
   gap: 1rem;
-  pointer-events: auto;
 }
 
 .logo-center {
@@ -198,36 +193,26 @@ p {
   opacity: 0.96;
 }
 
-.hero {
+.hero-screen {
   position: relative;
   min-height: 100svh;
   display: grid;
-  align-items: center;
+  align-items: end;
   overflow: clip;
+  isolation: isolate;
   text-align: center;
-}
-
-.hero-bg,
-.hero-overlay {
-  position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-}
-
-.hero-bg {
-  object-fit: cover;
-}
-
-.hero-overlay {
-  background: linear-gradient(120deg, rgba(10, 9, 8, 0.74), rgba(10, 9, 8, 0.54));
+  background-image: linear-gradient(120deg, rgba(10, 9, 8, 0.74), rgba(10, 9, 8, 0.48)),
+    url("hero/hero-main.jpg");
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
 }
 
 .hero-content {
   position: relative;
-  z-index: 1;
+  z-index: 2;
   max-width: 960px;
-  padding: clamp(7.5rem, 15vh, 11rem) 0 clamp(5rem, 10vh, 7rem);
+  padding: clamp(9rem, 19vh, 12rem) 0 clamp(7rem, 14vh, 9.5rem);
 }
 
 .hero-subtitle {
@@ -235,6 +220,19 @@ p {
   font-size: clamp(0.96rem, 1.6vw, 1.2rem);
   max-width: 55ch;
   color: rgba(248, 243, 238, 0.86);
+}
+
+.hero-scroll-hint {
+  position: absolute;
+  left: 50%;
+  bottom: clamp(1.35rem, 3.6vh, 2.4rem);
+  transform: translateX(-50%);
+  margin: 0;
+  z-index: 2;
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  font-size: 0.66rem;
+  color: rgba(248, 243, 238, 0.72);
 }
 
 .fullscreen-menu {
@@ -247,17 +245,11 @@ p {
   display: none;
 }
 
-.menu-overlay {
-  position: absolute;
-  inset: 0;
-  background: rgba(0, 0, 0, 0.2);
-}
-
 .menu-panel {
   position: relative;
   width: 100%;
   height: 100%;
-  background: #050505;
+  background: #080808;
   color: var(--white);
   overflow-y: auto;
 }
@@ -274,9 +266,9 @@ p {
 .menu-content {
   min-height: calc(100% - 86px);
   display: grid;
-  gap: 2.5rem;
-  padding-top: 2.2rem;
-  padding-bottom: 2.4rem;
+  gap: 2.7rem;
+  padding-top: 2.4rem;
+  padding-bottom: 3rem;
 }
 
 .menu-left h2 {
@@ -285,23 +277,15 @@ p {
   color: var(--white);
 }
 
-.menu-kicker {
-  margin: 0 0 0.8rem;
-  font-size: 0.72rem;
-  letter-spacing: 0.18em;
-  text-transform: uppercase;
-  color: rgba(248, 243, 238, 0.55);
-}
-
 .menu-links {
   display: grid;
-  gap: 0.65rem;
-  margin-bottom: 1.25rem;
+  gap: 0.8rem;
+  margin-bottom: 1.5rem;
 }
 
 .menu-links a {
   color: rgba(248, 243, 238, 0.9);
-  font-size: clamp(1rem, 1.6vw, 1.2rem);
+  font-size: clamp(1.02rem, 1.6vw, 1.26rem);
 }
 
 .menu-links a:hover,
@@ -322,7 +306,8 @@ p {
 }
 
 .menu-preview-image {
-  background: #111;
+  background: #101010;
+  border: 1px solid rgba(255, 255, 255, 0.14);
   border-radius: 16px;
   overflow: hidden;
   aspect-ratio: 4 / 5;
@@ -349,7 +334,7 @@ p {
   text-align: left;
   border: 0;
   border-bottom: 1px solid rgba(255, 255, 255, 0.17);
-  padding: 1.15rem 0;
+  padding: 1.25rem 0;
   background: transparent;
   color: rgba(248, 243, 238, 0.73);
   display: grid;
@@ -370,6 +355,10 @@ p {
 .service-item:focus-visible .service-label,
 .service-item.is-active .service-label {
   transform: translateX(4px);
+}
+
+.service-item.is-active .service-index {
+  opacity: 1;
 }
 
 .service-index {
@@ -618,6 +607,15 @@ summary {
   .menu-topbar {
     min-height: 72px;
     padding-top: 0.8rem;
+  }
+
+  .hero-content {
+    padding-top: 7.2rem;
+    padding-bottom: 6rem;
+  }
+
+  .hero-scroll-hint {
+    bottom: 1.2rem;
   }
 
   .booking-link {
