@@ -1,7 +1,6 @@
 const menuToggle = document.querySelector('.menu-toggle');
 const menuDialog = document.getElementById('fullscreen-menu');
 const menuClose = document.querySelector('.menu-close');
-const menuDismissLayer = document.querySelector('[data-menu-close]');
 const focusableSelector =
   'a[href], button:not([disabled]), textarea, input, select, [tabindex]:not([tabindex="-1"])';
 
@@ -34,10 +33,9 @@ const toggleMenu = (open) => {
   lastFocusedElement?.focus();
 };
 
-if (menuToggle && menuDialog && menuClose && menuDismissLayer) {
+if (menuToggle && menuDialog && menuClose) {
   menuToggle.addEventListener('click', () => toggleMenu(true));
   menuClose.addEventListener('click', () => toggleMenu(false));
-  menuDismissLayer.addEventListener('click', () => toggleMenu(false));
 
   menuDialog.querySelectorAll('a[href^="#"]').forEach((link) => {
     link.addEventListener('click', () => toggleMenu(false));
@@ -109,6 +107,17 @@ const setActiveService = (item) => {
 };
 
 if (serviceItems.length && servicePreviewImage) {
+  serviceItems.forEach((item, index) => {
+    item.dataset.index = String(index);
+  });
+
+  const focusByIndex = (index) => {
+    const safeIndex = Math.max(0, Math.min(serviceItems.length - 1, index));
+    const target = serviceItems[safeIndex];
+    target?.focus();
+    setActiveService(target);
+  };
+
   serviceItems.forEach((item) => {
     item.addEventListener('mouseenter', () => {
       if (window.matchMedia('(hover: hover)').matches) {
@@ -118,6 +127,23 @@ if (serviceItems.length && servicePreviewImage) {
 
     item.addEventListener('focus', () => setActiveService(item));
     item.addEventListener('click', () => setActiveService(item));
+    item.addEventListener('keydown', (event) => {
+      const currentIndex = Number(item.dataset.index || '0');
+
+      if (event.key === 'ArrowDown') {
+        event.preventDefault();
+        focusByIndex(currentIndex + 1);
+      } else if (event.key === 'ArrowUp') {
+        event.preventDefault();
+        focusByIndex(currentIndex - 1);
+      } else if (event.key === 'Home') {
+        event.preventDefault();
+        focusByIndex(0);
+      } else if (event.key === 'End') {
+        event.preventDefault();
+        focusByIndex(serviceItems.length - 1);
+      }
+    });
   });
 }
 

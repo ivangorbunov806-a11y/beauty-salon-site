@@ -17,29 +17,15 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <header class="site-header" id="top">
-      <div class="hero-header container" aria-label="Панель управления сайтом">
-        <button
-          class="menu-toggle"
-          aria-expanded="false"
-          aria-controls="fullscreen-menu"
-          aria-label="Открыть меню"
-        >
-          <span></span>
-          <span></span>
-        </button>
-        <a class="logo logo-center" href="#top" aria-label="Salon Éclat — на главную">
-          <img src="logo/logo-white.jpg" alt="Salon Éclat" />
-        </a>
-        <a class="booking-link" href="#booking">Запись</a>
-      </div>
-    </header>
-
-    <aside id="fullscreen-menu" class="fullscreen-menu" aria-hidden="true" hidden>
-      <div class="menu-overlay" data-menu-close></div>
-      <div class="menu-panel" role="dialog" aria-modal="true" aria-label="Полноэкранное меню">
-        <div class="menu-topbar container">
-          <button class="menu-close" type="button" aria-label="Закрыть меню">
+    <main id="top">
+      <section class="hero-screen section-dark">
+        <header class="hero-header container" aria-label="Панель управления сайтом">
+          <button
+            class="menu-toggle"
+            aria-expanded="false"
+            aria-controls="fullscreen-menu"
+            aria-label="Открыть меню"
+          >
             <span></span>
             <span></span>
           </button>
@@ -47,103 +33,112 @@
             <img src="logo/logo-white.jpg" alt="Salon Éclat" />
           </a>
           <a class="booking-link" href="#booking">Запись</a>
-        </div>
+        </header>
 
-        <div class="container menu-content">
-          <div class="menu-left">
-            <p class="menu-kicker">Navigation</p>
-            <h2>МЕНЮ</h2>
-
-            <div class="menu-links">
-              <a href="#services">Услуги</a>
-              <a href="#about">О салоне</a>
-              <a href="#gallery">Галерея</a>
-              <a href="#process">Процессы</a>
-              <a href="#contacts">Контакты</a>
-            </div>
-
-            <div class="menu-links menu-links-soft">
-              <a href="#">Instagram</a>
-              <a href="#">Telegram</a>
-              <a href="#booking">Записаться онлайн</a>
-            </div>
-
-            <div class="menu-preview-wrap">
-              <div class="menu-preview-image">
-                <img
-                  id="menu-service-image"
-                  src="services/service-problem-1.jpg"
-                  alt="Превью услуги"
-                />
-              </div>
-              <a href="#booking" class="btn btn-light">Записаться на консультацию</a>
-            </div>
-          </div>
-
-          <div class="menu-right" aria-label="Список услуг">
-            <button
-              class="service-item is-active"
-              type="button"
-              data-image="services/service-problem-1.jpg"
-              data-alt="Коррекция фигуры"
-            >
-              <span class="service-index">001</span>
-              <span class="service-label">Коррекция фигуры</span>
-            </button>
-            <button
-              class="service-item"
-              type="button"
-              data-image="services/service-problem-2.jpg"
-              data-alt="Аппаратные процедуры"
-            >
-              <span class="service-index">002</span>
-              <span class="service-label">Аппаратные процедуры</span>
-            </button>
-            <button
-              class="service-item"
-              type="button"
-              data-image="services/service-problem-3.jpg"
-              data-alt="Антицеллюлитный уход"
-            >
-              <span class="service-index">003</span>
-              <span class="service-label">Антицеллюлитный уход</span>
-            </button>
-            <button
-              class="service-item"
-              type="button"
-              data-image="services/service-problem-4.jpg"
-              data-alt="Лимфодренаж"
-            >
-              <span class="service-index">004</span>
-              <span class="service-label">Лимфодренаж</span>
-            </button>
-            <button
-              class="service-item"
-              type="button"
-              data-image="services/service-problem-5.jpg"
-              data-alt="Моделирование силуэта"
-            >
-              <span class="service-index">005</span>
-              <span class="service-label">Моделирование силуэта</span>
-            </button>
-          </div>
-        </div>
-      </div>
-    </aside>
-
-    <main>
-      <section class="hero section-dark">
-        <div class="hero-overlay"></div>
-        <img class="hero-bg" src="hero/hero-main.jpg" alt="Интерьер салона красоты" />
         <div class="container hero-content fade-up">
           <p class="eyebrow">Премиальный уход</p>
-          <h1>Эстетика тишины и совершенного силуэта</h1>
+          <h1>Эстетика тишины и&nbsp;совершенного силуэта</h1>
           <p class="hero-subtitle">
-            Деликатные аппаратные и уходовые ритуалы в атмосфере спокойствия,
-            персонального внимания и безупречного сервиса.
+            Спокойная архитектура сервиса, деликатные протоколы ухода и пространство, где
+            каждая деталь работает на ваш комфорт.
           </p>
         </div>
+
+        <p class="hero-scroll-hint">scroll to discover more</p>
       </section>
+
+      <aside id="fullscreen-menu" class="fullscreen-menu" aria-hidden="true" hidden>
+        <div class="menu-panel" role="dialog" aria-modal="true" aria-label="Полноэкранное меню">
+          <div class="menu-topbar container">
+            <button class="menu-close" type="button" aria-label="Закрыть меню">
+              <span></span>
+              <span></span>
+            </button>
+            <a class="logo logo-center" href="#top" aria-label="Salon Éclat — на главную">
+              <img src="logo/logo-white.jpg" alt="Salon Éclat" />
+            </a>
+            <a class="booking-link" href="#booking">Запись</a>
+          </div>
+
+          <div class="container menu-content">
+            <div class="menu-left">
+              <h2>МЕНЮ</h2>
+
+              <nav class="menu-links" aria-label="Навигация">
+                <a href="#services">Услуги</a>
+                <a href="#about">О салоне</a>
+                <a href="#gallery">Галерея</a>
+                <a href="#process">Процессы</a>
+                <a href="#contacts">Контакты</a>
+              </nav>
+
+              <div class="menu-links menu-links-soft">
+                <a href="#">Instagram</a>
+                <a href="#">Telegram</a>
+                <a href="#booking">Записаться онлайн</a>
+              </div>
+
+              <div class="menu-preview-wrap">
+                <div class="menu-preview-image" aria-live="polite">
+                  <img
+                    id="menu-service-image"
+                    src="services/service-problem-1.jpg"
+                    alt="Коррекция фигуры"
+                  />
+                </div>
+              </div>
+            </div>
+
+            <div class="menu-right" aria-label="Список услуг">
+              <button
+                class="service-item is-active"
+                type="button"
+                data-image="services/service-problem-1.jpg"
+                data-alt="Коррекция фигуры"
+              >
+                <span class="service-index">01</span>
+                <span class="service-label">Коррекция фигуры</span>
+              </button>
+              <button
+                class="service-item"
+                type="button"
+                data-image="services/service-problem-2.jpg"
+                data-alt="Аппаратные процедуры"
+              >
+                <span class="service-index">02</span>
+                <span class="service-label">Аппаратные процедуры</span>
+              </button>
+              <button
+                class="service-item"
+                type="button"
+                data-image="services/service-problem-3.jpg"
+                data-alt="Антицеллюлитный уход"
+              >
+                <span class="service-index">03</span>
+                <span class="service-label">Антицеллюлитный уход</span>
+              </button>
+              <button
+                class="service-item"
+                type="button"
+                data-image="services/service-problem-4.jpg"
+                data-alt="Лимфодренаж"
+              >
+                <span class="service-index">04</span>
+                <span class="service-label">Лимфодренаж</span>
+              </button>
+              <button
+                class="service-item"
+                type="button"
+                data-image="services/service-problem-5.jpg"
+                data-alt="Моделирование силуэта"
+              >
+                <span class="service-index">05</span>
+                <span class="service-label">Моделирование силуэта</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </aside>
 
       <section id="services" class="section services">
         <div class="container">
